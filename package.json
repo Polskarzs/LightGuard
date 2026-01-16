@@ -1,0 +1,39 @@
+{
+  "name": "lightguard",
+  "version": "1.0.0",
+  "description": "Discreet schermfilter tegen fel licht",
+  "author": "Polskarzs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.polskarzs.LightGuard",
+    "productName": "LightGuard",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    }
+  }
+}
